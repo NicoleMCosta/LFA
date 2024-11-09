@@ -1,0 +1,37 @@
+Trabalho Final - Linguagens Formais dos Autômatos (LFA)
+Prof. Ricardo [..]
+
+Equipe: Isabela Kremp, Marco Rigon e Nicole Costa
+
+Instruções
+
+simulador de cidade com as rotas de transito de 9 quarteirões
+conterá 2 semaforos (quando fecha de um lado, abre do outro)
+
+
+direções possiveis:
+    direita
+    esquerda
+    cima
+    baixo
+inicio e fim pré defidos (pode escolher)
+
+cenario parametrizado: quadrado (2x2, 3x3 etc) DEVE PERMITIR REDIMENSIONAR
+    vias verticais: mâo dupla
+    vias horizontais: mão unica/ alterna entre linhas
+
+ caminhos infinitos com deslocamento sempre finito
+
+
+
+
+INFORMAÇÃO DOCUMENTAÇÃO NUMPY
+field named f0 containing a 3-character string
+
+field named f1 containing a sub-array of shape (3,) containing 64-bit unsigned integers
+
+field named f2 containing a 3 x 4 sub-array containing 10-character strings
+
+import numpy as np
+
+dt = np.dtype("S3, 3u8, (3,4)S10")
