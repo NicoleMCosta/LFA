@@ -1,7 +1,6 @@
 import random as rd
 import string
 import math
-import numpy as np
 
 # 0   1   2   3
 #   ❑   ❑   ❑
@@ -43,27 +42,34 @@ def proximo_estado(estado_atual, pos): #nao verifica se a via permite a moviment
 
 
 def semaforo(set_off):
-    #set_off = numero de carros que passaram pelo semaforo
     if set_off == True:
         return #mudar o caminho possivel
 
 
 
-num_carros = rd.randint(0,5)
 num_quadras = (2,2)
 num_estados = (num_quadras[0]+1)*(num_quadras[1]+1)  #começa do 1
 
 
-x = 2
+x = 1
 y = 1
 estado_atual =(x,y)
 
-rota = rd.choices('debc', k = 5)
-print(f"rota: {rota} ")
+num_carros = rd.randint(1,5)
+# print(num_carros)
 
-#for i in range(num_carros):
-#    np.array([num_carros[i],[rota]])
-    #https://stackoverflow.com/questions/24832715/numpy-array-matrix-of-mixed-types
+k1 = rd.randint(1,200)
+rota = rd.choices('debc', k = 5) 
+print(f"rota: {rota}\n{len(rota)} ")
+
+pilha = []
+
+# for i in range(num_carros):
+#    for r in range(len(rota)):
+#     pilha[i][r] = rota[r]
+
+
+# print(pilha)
 
 for path in rota:
     caminho = proximo_estado(estado_atual, path)
