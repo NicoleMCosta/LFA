@@ -53,7 +53,7 @@ def simulador(num_carros, quintupla, semaforo, MAXIMOPILHA):
     estacionados = []
 
     for c in carros:
-        print(f"Carro {id(c)}\n")
+        print(f"\nCarro {id(c)}\n")
         while c.estadoAtual not in quintupla["final"]:
             estadoAnterior = c.estadoAtual
             while True:
@@ -62,7 +62,7 @@ def simulador(num_carros, quintupla, semaforo, MAXIMOPILHA):
                     c.estadoAtual = transicao
                     break
 
-            print(f"Carro {id(c)}: {estadoAnterior} -> {c.estadoAtual}")
+            print(f"{estadoAnterior} -> {c.estadoAtual}")
             Carro.verificaSemaforo(c.estadoAtual, semaforo, pilha, MAXIMOPILHA)
 
         if c.estadoAtual in quintupla["final"]:
